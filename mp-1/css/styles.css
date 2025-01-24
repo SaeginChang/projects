@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #f0f8ff; /* Light blue background for the body */
+}
+
+header, nav, main, footer {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px; /* Center content and limit width */
+}
+
+/* Header */
+header {
+    background-color: #6c5ce7; /* Purple background */
+    color: white; /* White text for contrast */
+    text-align: left;
+}
+
+header h1 {
+    font-size: calc(2rem + 1vw); /* Responsive font size */
+    margin: 0;
+}
+
+header p {
+    font-size: calc(1rem + 0.5vw);
+    margin: 5px 0 0 0;
+}
+
+/* Navigation */
+nav {
+    background-color: #74b9ff; /* Light blue for nav */
+    border-radius: 8px; /* Rounded corners for nav bar */
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 1000px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Adjust layout for small screens */
+    justify-content: space-around; /* Evenly spaced links */
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #2d3436; /* Dark text color */
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #0984e3; /* Darker blue on hover */
+    color: white;
+}
+
+/* Main Content */
+main {
+    background-color: #dfe6e9; /* Light gray background */
+    color: #2d3436; /* Dark text color */
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px; /* Rounded corners */
+    min-height: 100vh; /* Full height for large screens */
+}
+
+main h2 {
+    font-size: calc(1.5rem + 1vw);
+    color: #6c5ce7; /* Match header purple */
+}
+
+main p {
+    font-size: calc(1rem + 0.3vw);
+}
+
+/* Footer */
+footer {
+    background-color: #2d3436; /* Dark footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #74b9ff; /* Light blue for links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 750px) {
+    header {
+        text-align: center; /* Center-align for small screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack links vertically */
+        align-items: center;
+    }
+
+    main {
+        width: 100%; /* Use full width for small screens */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    main {
+        max-width: 100%; /* Occupy full width for medium screens */
+    }
+}
