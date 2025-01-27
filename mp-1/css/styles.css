@@ -1,15 +1,20 @@
-/* Body for all pages */
+/* body for all pages */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    /* light blue background color */
+    /* light blue background */
     background-color: #f0f8ff;
+    display: flex;
     justify-content: center;
-    padding: 0 100px;
+    min-height: 100vh;
+}
+
+/* grid layout for aligning areas */
+body {
     display: grid;
-    /* grid for layout */
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 250px 1fr;
     grid-template-areas:
@@ -18,7 +23,8 @@ body {
         "footer footer";
     max-width: 1200px;
     width: 100%;
-    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* header for all pages */
@@ -46,9 +52,8 @@ header p {
 /* navigation bar */
 nav {
     grid-area: nav;
-    /* Light blue color */
+    /* light blue color */
     background-color: #74b9ff;
-    /* rounded corners for nav bar */
     padding: 10px;
     height: auto;
 }
@@ -154,8 +159,10 @@ footer a:hover {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     body {
-        grid-template-columns: 200px 1fr;
+        grid-template-columns: 250px 1fr;
+        max-width: 95%;
     }
 }
+
