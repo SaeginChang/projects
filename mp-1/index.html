@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Resume - Home </title>
-        <link rel="stylesheet" href="css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website showcasing Nick Chang's Online Resume.">
+    <title> Resume - Home </title>
+    <link rel="stylesheet" href="css/index-styles.css">
+</head>
 
-    </head>
-    <body>
-        <header>
-            <h1>Nicholas Chang</h1>
-            <p>Welcome to my Online Resume</p>
-        </header>
-        
+<body>
+<div id="page-wrapper">
+
+    <!-- header starts -->
+    <header>
+        <h1>Nicholas Chang</h1>
+        <p>Welcome to my Online Resume</p>
+    </header>
+    <!-- header ends -->
+
+    <div id="container">
+        <!-- navigation start -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,14 +29,43 @@
                 <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
+        <!-- navigation end -->
 
+        <!-- main content start -->
         <main>
-            <h2>Welcome to My Resume Website</h2>
-            <p>Hello! I'm Nicholas Chang, a Computer Science major at Boston University! This website showcases my Education, Experiences, Skills, References, and Projects</p>
-            <img src ="profile.png" alt="Profile Picture"/>
+            <!-- one column start -->
+            <h3 id="main-title">HOME</h3>
+
+            <!-- two-column layout -->
+            <div id="main">
+                <div id="main-image">
+                    <img id="profile-image" src="profile.png" alt="profile">
+                </div>
+                <div id="main-text">
+                    <p>Hello! I'm Nicholas Chang, a Computer Science major at Boston University! </p>
+                    <br>
+                    <p>I have a strong passion for Cybersecurity and Machine Learning! I enjoy learning
+                    about ethical hacking and how AI can enhance automation and security.</p>
+                    <br>
+                    <p>This website showcases my Education, Experiences, Skills, References, and Projects</p>
+                </div>
+            </div>
+            <div id="contact">
+                <h1>Contact Me</h1>
+                <br>
+                <h2>Email: nickchang2003@gmail.com</h2>
+                <h2><a href="https://www.linkedin.com/in/nickchang0826/">LinkedIn</a></h2>
+                <h2><a href="https://github.com/SaeginChang">GitHub</a></h2>
+            </div>
         </main>
-        <footer>
-            <p>&copy; 2025 Nick Chang | <a href="credits.html">Credits</a></p>
-        </footer>
-    </body>
+        <!-- main content end -->
+    </div>
+
+    <!-- footer start -->
+    <footer>
+        <p>All Rights Reserved by Nicholas Chang <a href="credits.html">Credits</a> &copy;</p>
+    </footer>
+    <!-- footer end -->
+</div>
+</body>
 </html>

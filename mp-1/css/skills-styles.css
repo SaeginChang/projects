@@ -1,0 +1,165 @@
+/* needed for every beginning of css */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* centering page */
+#page-wrapper {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+/* header starts */
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 1vw;
+    background-color: #6c5ce7;
+    color: tan;
+}
+/* header ends */
+
+/* two column container starts */
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    background-color: #3490e0;
+}
+
+nav {
+    width: 15%;
+    background-color: #74b9ff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: calc(2px + 1.5vw);
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li {
+    font-size: calc(2px + 1vw);
+    width: 100%;
+    background-color: #9084e3;
+    padding: 2vh 0;
+    margin: 5vh auto;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: #7b94a6;
+}
+
+main p {
+    margin: 0 1vw;
+    font-size: calc(2px + 2vw);
+}
+
+#main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2vh 2vw;
+}
+
+#main-text {
+    align-self: center;
+    width: 100%;
+    margin: 1vh 1vw;
+}
+
+#main-text ul li {
+    font-size: calc(1px + 1.5vw);
+    line-height: 1;
+    margin-bottom: 8px;
+    text-align: center;
+    list-style-type: none;
+}
+
+#main-title {
+    margin: 2vh 2vw 0;
+    text-align: center;
+    font-size: calc(3px + 3vw);
+    color: #620067;
+}
+
+.job-title {
+    text-align: center;
+    font-size: calc(1px + 2vw);
+    margin: 5vh 2vw 4vh;
+}
+/* two column container ends */
+
+/* footer begins */
+footer {
+    background-color: #2d3436;
+    color: white;
+    padding: 1vh 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+footer a {
+    color: bisque;
+}
+
+/* footer ends */
+
+/* layout and adjustment begins */
+@media screen and (max-width: 900px) {
+    header {
+        align-items: center;
+    }
+
+    #container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    #main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #main-text {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav li {
+        font-size: calc(2px + 1.5vw);
+        padding: 1% 0.5%;
+        margin: 1% 0.5%;
+    }
+}
+/* layout and adjustment ends */

@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Resume - Home </title>
-        <link rel="stylesheet" href="css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website showcasing Nick Chang's Online Resume.">
+    <title> Resume - Home </title>
+    <link rel="stylesheet" href="css/skills-styles.css">
+</head>
 
-    </head>
-    <body>
-        <header>
-            <h1>Nicholas Chang</h1>
-            <p>Welcome to my Online Resume</p>
-        </header>
-        
+<body>
+<div id="page-wrapper">
+
+    <!-- header starts -->
+    <header>
+        <h1>Nicholas Chang</h1>
+        <p>Welcome to my Online Resume</p>
+    </header>
+    <!-- header ends -->
+
+    <div id="container">
+        <!-- navigation start -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,21 +29,46 @@
                 <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
+        <!-- navigation end -->
 
+
+        <!-- main content start -->
         <main>
-            <h2>Skills</h2>
-            <h3>Programming Languages</h3>
-            <ul>
-                <li>Python, C++, C#, Java, MATLAB, R, Assembly, JavaScript, C, Go Lang</li>
-            </ul>
-            <h3>Tools & Technologies</h3>
-            <ul>
-                <li>Linux, AutoCAD, Firebase</li>
-            </ul>
-        </main>
+            <h3 id="main-title">SKILLS</h3>
 
-        <footer>
-            <p>&copy; 2025 Nick Chang | <a href="credits.html">Credits</a></p>
-        </footer>
-    </body>
+            <div id="main">
+                <div id="main-text">
+                    <h3 class="job-title">Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Java</li>
+                        <li>MATLAB</li>
+                        <li>R</li>
+                        <li>Assembly</li>
+                        <li>JavaScript</li>
+                        <li>C</li>
+                        <li>Go Lang</li>
+                    </ul>
+                    <br>
+                    <h3 class="job-title">Tools & Technologies</h3>
+                    <ul>
+                        <li>Linux</li>
+                        <li>AutoCAD</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <!-- main content end -->
+    </div>
+
+    <!-- footer start -->
+    <footer>
+        <p>All Rights Reserved by Nicholas Chang <a href="credits.html">Credits</a> &copy;</p>
+    </footer>
+    <!-- footer end -->
+</div>
+</body>
 </html>

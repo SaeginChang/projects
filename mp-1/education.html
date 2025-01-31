@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Resume - Education </title>
-        <link rel="stylesheet" href="css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website showcasing Nick Chang's Online Resume.">
+    <title> Resume - Home </title>
+    <link rel="stylesheet" href="css/education-styles.css">
+</head>
 
-    </head>
-    <body>
-        <header>
-            <h1>Nicholas Chang</h1>
-            <p>Welcome to my Online Resume</p>
-        </header>
-        
+<body>
+<div id="page-wrapper">
+
+    <!-- header starts -->
+    <header>
+        <h1>Nicholas Chang</h1>
+        <p>Welcome to my Online Resume</p>
+    </header>
+    <!-- header ends -->
+
+    <div id="container">
+        <!-- navigation start -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,27 +29,50 @@
                 <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
+        <!-- navigation end -->
 
+        <!-- main content start -->
         <main>
-            <h2>Education</h2>
-            <p><strong>Boston University</strong>, Boston, MA (Expected May 2025)</p>
-            <p><strong>Bachelor of Science</strong>, Major: Computer Science, Minor: Business</p>
-            <h3>Relevant Coursework:</h3>
-            <ul>
-                <li>Combinatoric Structures</li>
-                <li>Geometric Algorithms</li>
-                <li>Computer Systems</li>
-                <li>Software Engineering</li>
-                <li>Distributed Systems</li>
-                <li>Probability in Computing</li>
-                <li>Runtime Analysis</li>
-                <li>Foundations of Data Science</li>
-                <li>Machine Learning</li>
-            </ul>
-        </main>
+            <!-- one column start -->
+            <h3 id="main-title">EDUCATION</h3>
 
-        <footer>
-            <p>&copy; 2025 Nick Chang | <a href="credits.html">Credits</a></p>
-        </footer>
-    </body>
+            <!-- two-column layout for BU logo and description -->
+            <div id="main">
+                <div id="main-image">
+                    <img id="bu-image" src="Boston-University-Logo.jpg" alt="bu-logo" width="300" height="200">
+                </div>
+                <div id="main-text">
+                    <p><strong>Boston University</strong>, Boston, MA (Expected May 2025)</p>
+                    <br>
+                    <p><strong>Bachelor of Science</strong>, Major: Computer Science, Minor: Business</p>
+                    <br>
+                    <p><strong>Relevant Coursework:</strong></p>
+                    <ul>
+                        <li>Combinatoric Structures</li>
+                        <li>Geometric Algorithms</li>
+                        <li>Computer Systems</li>
+                        <li>Software Engineering</li>
+                        <li>Distributed Systems</li>
+                        <li>Probability in Computing</li>
+                        <li>Runtime Analysis</li>
+                        <li>Foundations of Data Science</li>
+                        <li>Machine Learning</li>
+                        <li>Full-Stack Application Design and Development</li>
+                        <li>Introduction to Artificial Intelligence</li>
+                        <li>Elements of the Theory of Computation</li>
+                        <li>Topics in Computer Science</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <!-- main content end -->
+    </div>
+
+    <!-- footer start -->
+    <footer>
+        <p>All Rights Reserved by Nicholas Chang <a href="credits.html">Credits</a> &copy;</p>
+    </footer>
+    <!-- footer end -->
+</div>
+</body>
 </html>

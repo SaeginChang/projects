@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title> Resume - Home </title>
-        <link rel="stylesheet" href="css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A website showcasing Nick Chang's Online Resume.">
+    <title> Resume - Home </title>
+    <link rel="stylesheet" href="css/projects-styles.css">
+    <script src="calculator.js"></script>
+</head>
 
-    </head>
-    <body>
-        <header>
-            <h1>Nicholas Chang</h1>
-            <p>Welcome to my Online Resume</p>
-        </header>
-        
+<body>
+<div id="page-wrapper">
+
+    <!-- header starts -->
+    <header>
+        <h1>Nicholas Chang</h1>
+        <p>Welcome to my Online Resume</p>
+    </header>
+    <!-- header ends -->
+
+    <div id="container">
+        <!-- navigation start -->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -22,28 +30,53 @@
                 <li><a href="projects.html">Projects</a></li>
             </ul>
         </nav>
+        <!-- navigation end -->
 
+        <!-- main content start -->
         <main>
-            <h2>Projects</h2>
-            <section>
-                <h3>Messenger Chatting Application</h3>
-                <p>Designed and developed a real-time messenger application using Python and C++</p>
-                <p>Developed the backend and frontend for the application, including database management, server infrastructure, and advanced encryption protocols</p>
-            </section>
-            <section>
-                <h3>Music and Movie Linking with OAuth</h3>
-                <p>Led a 4-people team project to link user to music playlists based on their movie tastes while integrating OAuth for secure authentication.</p>
-                <p>Worked on both frontend and backend teams to implement Firebase authentication and Spotify APIs</p>
-            </section>
-            <section id="calculator">
-                <h3>JavaScript Calculator</h3>
-                <p id="result">Result: </p>
-                <script src="js/calculator.js"></script>
-            </section>
-        </main>
+            <!-- one column start -->
+            <h3 id="main-title">PROJECTS</h3>
 
-        <footer>
-            <p>&copy; 2025 Nick Chang | <a href="credits.html">Credits</a></p>
-        </footer>
-    </body>
+            <!-- two-column layout -->
+            <div id="main">
+                <div id="main-text">
+                    <section>
+                        <h3 class="project-title">Messenger Chatting Application</h3>
+                        <p>Designed and developed a real-time messenger application using Python and C++</p>
+                        <p>Developed the backend and frontend for the application, including database management, server infrastructure, and advanced encryption protocols</p>
+                    </section>
+                    <section>
+                        <h3 class="project-title">Music and Movie Linking with OAuth</h3>
+                        <p>Led a 4-people team project to link user to music playlists based on their movie tastes while integrating OAuth for secure authentication.</p>
+                        <p>Worked on both frontend and backend teams to implement Firebase authentication and Spotify APIs</p>
+                    </section>
+                    <section id="calculator">
+                        <h3 id="calc-title">JavaScript Calculator</h3>
+                        <div>
+                            <input type="text" id="first_number" placeholder="Enter First Number">
+                            <input type="text" id="second_number" placeholder="Enter Second Number">
+
+                            <button onclick="myAdd()">+</button>
+                            <button onclick="subtract()">-</button>
+                            <button onclick="multiply()">*</button>
+                            <button onclick="divide()">/</button>
+                            <button onclick="power()">**</button>
+                            <button onclick="clearCalculator()">Clear</button>
+
+                            <h3 id="output"></h3>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <!-- main content end -->
+    </div>
+
+    <!-- footer start -->
+    <footer>
+        <p>All Rights Reserved by Nicholas Chang <a href="credits.html">Credits</a> &copy;</p>
+    </footer>
+    <!-- footer end -->
+</div>
+</body>
 </html>

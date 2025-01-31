@@ -2,33 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="A website showcasing Nick Chang's Online Resume.">
     <title> Resume - Home </title>
-    <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="css/credits-styles.css">
 </head>
+
 <body>
-<header>
-    <h1>Nicholas Chang</h1>
-    <p>Welcome to my Online Resume</p>
-</header>
+    <div id="page-wrapper">
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="references.html">References</a></li>
-        <li><a href="projects.html">Projects</a></li>
-    </ul>
-</nav>
+        <!-- header starts -->
+        <header>
+            <h1>Nicholas Chang</h1>
+            <p>Welcome to my Online Resume</p>
+        </header>
+        <!-- header ends -->
 
-<main>
-    <h2>Welcome to My Resume Website</h2>
-    <p>Credits: Nick Chang</p>
-</main>
-<footer>
-    <p>&copy; 2025 Nick Chang | <a href="credits.html">Credits</a></p>
-</footer>
+        <div id="container">
+            <!-- navigation start -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+            <!-- navigation end -->
+
+            <!-- main content start -->
+            <main>
+                <!-- one column start -->
+                <h3 id="main-title">CREDITS</h3>
+
+                <!-- two-column layout for computer pic and credits -->
+                <div id="main">
+                    <div id="main-image">
+                        <img id="comp-image" src="computer.png" alt="computer" width="300" height="300">
+                    </div>
+                    <div id="main-text">
+                        <p>
+                            This website was designed and developed by <strong>Nicholas Chang</strong> as part of an online resume project.
+                            It showcases my education, work experience, skills, and projects in an interactive format.
+                        </p>
+
+                        <br>
+
+                        <h3>Technologies Used</h3>
+                        <ul>
+                            <li><strong>HTML</strong> - Structuring the content</li>
+                            <li><strong>CSS</strong> - Styling the website</li>
+                            <li><strong>JavaScript</strong> - Interactive Calculator</li>
+                            <li><strong>GitHub</strong> - Version control and project hosting</li>
+                            <li><strong>Vercel</strong> - Hosting the website online</li>
+                        </ul>
+
+                        <br>
+
+                        <h3>Acknowledgments</h3>
+                        <p>
+                            I would like to thank the class CAS CS 391 for the assignment to make this website.
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <!-- main content end -->
+        </div>
+
+        <!-- footer start -->
+        <footer>
+            <p>All Rights Reserved by Nicholas Chang <a href="credits.html">Credits</a> &copy;</p>
+        </footer>
+        <!-- footer end -->
+    </div>
 </body>
 </html>
