@@ -109,6 +109,58 @@ main p {
     margin: 0 2vw;
     font-size: calc(1px + 2vw);
 }
+
+/* calculator css stuff */
+#calculator {
+    /* light blue background */
+    background-color: #f0f8ff;
+    padding: 20px;
+    /* purple border */
+    border: 2px solid #6c5ce7;
+    margin: 20px 0;
+}
+
+/* calc input fields */
+#calculator input[type="text"] {
+    width: 100px;
+    padding: 10px;
+    margin: 10px 5px;
+    /* purple border */
+    border: 1px solid #6c5ce7;
+    font-size: 16px;
+    text-align: center;
+    outline: none;
+}
+
+/* calc buttons */
+#calculator button {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    background-color: #6c5ce7;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#calculator button:hover {
+    /* blue background on hover */
+    background-color: #0984e3;
+}
+
+/* output */
+#output {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    /* purple border */
+    border: 2px solid #6c5ce7;
+    background-color: #f0f8ff;
+    color: #2d3436;
+    min-height: 40px;
+}
 /* two column container ends */
 
 /* footer begins */
@@ -171,63 +223,3 @@ footer a {
     }
 }
 /* layout and adjustment ends */
-
-/* calculator css stuff */
-#calculator {
-    /* light blue background */
-    background-color: #f0f8ff;
-    padding: 20px;
-    /* purple border */
-    border: 2px solid #6c5ce7;
-    margin: 20px 0;
-}
-
-/* calc input fields */
-#calculator input[type="text"] {
-    width: 100px;
-    padding: 10px;
-    margin: 10px 5px;
-    /* purple border */
-    border: 1px solid #6c5ce7;
-    font-size: 16px;
-    text-align: center;
-    outline: none;
-}
-
-/* calc buttons */
-#calculator button {
-    padding: 10px 15px;
-    margin: 10px 5px;
-    border: none;
-    background-color: #6c5ce7;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-#calculator button:hover {
-    /* blue background on hover */
-    background-color: #0984e3;
-}
-
-/* output */
-#output {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    /* purple border */
-    border: 2px solid #6c5ce7;
-    background-color: #f0f8ff;
-    color: #2d3436;
-    min-height: 40px;
-}
-
-#container{
-    width: 100%;
-    display: flex;
-    /* this needs to be overwritten when going to a smaller screen */
-    flex-direction: row;
-    /* flex-direction: column; */
-}
