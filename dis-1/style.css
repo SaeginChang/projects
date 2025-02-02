@@ -1,0 +1,14 @@
+/* needed for every beginning of css */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main-content,
+#error-content{
+    visibility: hidden;
+}
+
+#error-message {
+    color: red;
+}

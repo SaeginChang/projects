@@ -1,3 +1,4 @@
+// display w colors
 function displayResult(result) {
     const output = document.getElementById("output");
     output.innerHTML = String(result);
