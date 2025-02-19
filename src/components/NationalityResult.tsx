@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Nationality } from "../Interfaces/Nationality";
+import { Nationality } from "../interfaces/Nationality";
 
 const NationalityDiv = styled.div`
     display: flex;
