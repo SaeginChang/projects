@@ -1,7 +1,7 @@
 import NationalityResult from "./components/NationalityResult";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import { Nationality } from "./interfaces/Nationality";
+import { Nationality } from "./Interfaces/Nationality";
 
 const ParentDiv = styled.div`
     width: 80vw;
