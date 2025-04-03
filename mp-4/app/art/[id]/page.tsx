@@ -1,14 +1,27 @@
-interface ArtProps {
-    params: {
-        id: string;
-    };
+import { notFound } from 'next/navigation';
+
+interface ArtData {
+    id: number;
+    title: string;
+    people?: { name: string }[];
+    primaryimageurl?: string;
+    description?: string;
 }
 
-export default async function ArtDetailPage({ params }: ArtProps) {
-    const res = await fetch(`https://api.harvardartmuseums.org/object/${params.id}?apikey=${process.env.HARVARD_API_KEY}`);
-    if (!res.ok) return <p>Failed to load artwork.</p>;
+async function fetchArtDetails(id: string): Promise<ArtData | null> {
+    const apiKey = process.env.HARVARD_API_KEY;
+    const res = await fetch(`https://api.harvardartmuseums.org/object/${id}?apikey=${apiKey}`)
 
-    const data = await res.json();
+    if (!res.ok) return null;
+
+    return await res.json();
+}
+
+
+export default async function ArtDetailPage({ params }: { params: { id: string }; }) {
+    const data = await fetchArtDetails(params.id);
+
+    if (!data) notFound();
 
     return (
         <div>
