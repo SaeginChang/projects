@@ -1,5 +1,11 @@
 import { notFound } from 'next/navigation';
 
+type PageProps = {
+    params: {
+        id: string;
+    };
+};
+
 interface ArtData {
     id: number;
     title: string;
@@ -17,9 +23,9 @@ async function fetchArtDetails(id: string): Promise<ArtData | null> {
     return await res.json();
 }
 
-
-export default async function ArtDetailPage({ params }: { params: { id: string }; }) {
-    const data = await fetchArtDetails(params.id);
+export default async function ArtDetailPage({ params }: PageProps) {
+    const id = params.id;
+    const data = await fetchArtDetails(id);
 
     if (!data) notFound();
 
