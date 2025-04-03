@@ -1,11 +1,5 @@
 import { notFound } from 'next/navigation';
 
-type PageProps = {
-    params: {
-        id: string;
-    };
-};
-
 interface ArtData {
     id: number;
     title: string;
@@ -16,6 +10,7 @@ interface ArtData {
 
 async function fetchArtDetails(id: string): Promise<ArtData | null> {
     const apiKey = process.env.HARVARD_API_KEY;
+
     const res = await fetch(`https://api.harvardartmuseums.org/object/${id}?apikey=${apiKey}`)
 
     if (!res.ok) return null;
@@ -23,9 +18,8 @@ async function fetchArtDetails(id: string): Promise<ArtData | null> {
     return await res.json();
 }
 
-export default async function ArtDetailPage({ params }: PageProps) {
-    const id = params.id;
-    const data = await fetchArtDetails(id);
+export default async function ArtDetailPage({ params }: { params: { id: string } }) {
+    const data = await fetchArtDetails(params.id);
 
     if (!data) notFound();
 
