@@ -1,0 +1,34 @@
+import { redirect } from 'next/navigation';
+import { MongoClient } from 'mongodb';
+
+const uri = process.env.MONGODB_URI!;
+const client = new MongoClient(uri);
+const dbName = 'urlShortener';
+const collectionName = 'urls'
+
+type Params = {
+    params: { alias: string };
+}
+
+export default async function RedirectPage({ params }: Params) {
+    const { alias } = params;
+
+    try {
+        await client.connect();
+        const db = client.db(dbName);
+        const urls = db.collection(collectionName);
+
+        const record = await urls.findOne({ alias });
+
+        if (record && record.url) {
+            redirect(record.url);
+        }
+    } catch (err) {
+        console.error(err);
+        return (
+            <div style={{ padding: '2rem', textAlign: 'center' }}>
+                <h1>Something went wrong?</h1>
+            </div>
+        )
+    }
+}
