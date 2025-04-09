@@ -6,7 +6,7 @@ const client = new MongoClient(uri);
 const dbName = 'urlShortener';
 const collectionName = 'urls'
 
-export default async function RedirectPage({ params }: { params: { alias: string } }) {
+export default async function RedirectPage({ params }: { params: Promise<{ alias: string }> }) {
     const { alias } = params;
 
     try {
