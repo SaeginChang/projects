@@ -6,8 +6,8 @@ const client = new MongoClient(uri);
 const dbName = 'urlShortener';
 const collectionName = 'urls'
 
-export default async function RedirectPage({ params }: { params: Promise<{ alias: string }> }) {
-    const { alias } = await params;
+export default async function RedirectPage({ params }: { params: { alias: string } }) {
+    const { alias } = params;
 
     try {
         await client.connect();
@@ -19,11 +19,13 @@ export default async function RedirectPage({ params }: { params: Promise<{ alias
         if (record && record.url) {
             redirect(record.url);
         }
-    } catch (err) {
-        console.error(err);
+    } catch (err: unknown) {
+        const error = err as { message?: string };
+        console.error('redirect error:', err);
         return (
             <div style={{ padding: '2rem', textAlign: 'center' }}>
-                <h1>Something went wrong?</h1>
+                <h1>Something went wrong????</h1>
+                <p>The error is: { error.message }</p>
             </div>
         )
     }
