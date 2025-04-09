@@ -7,7 +7,7 @@ const dbName = 'urlShortener';
 const collectionName = 'urls'
 
 export default async function RedirectPage({ params }: { params: Promise<{ alias: string }> }) {
-    const { alias } = params;
+    const { alias } = await params;
 
     try {
         await client.connect();
