@@ -1,40 +1,43 @@
-import { NextResponse } from 'next/server';
-import { MongoClient } from 'mongodb';
+import { NextResponse } from "next/server";
+import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI!;
+const uri = process.env.MONGODB_URI;
+if (!uri) {
+    throw new Error("MONGODB_URI is not defined in your environment variables.");
+}
 const client = new MongoClient(uri);
-const dbName = 'urlShortener';
-const collectionName = 'urls';
+const dbName = "urlShortener";
+const collectionName = "urls";
 
-export async function POST(req: Request) {
+export async function POST(request: Request) {
     try {
-        const { url, alias } = await req.json();
+        const { url, alias } = await request.json();
 
         if (!url || !alias) {
-            return NextResponse.json({error: 'url and alias required' }, {status: 400});
+            return NextResponse.json({ error: "URL and alias are required." }, { status: 400 });
         }
 
         try {
             new URL(url);
         } catch {
-            return NextResponse.json({error: 'invalid url format'}, {status: 400});
+            return NextResponse.json({ error: "Invalid URL format." }, { status: 400 });
         }
 
         await client.connect();
-        const db = client.db(dbName)
+        const db = client.db(dbName);
         const urls = db.collection(collectionName);
 
         const existing = await urls.findOne({ alias });
         if (existing) {
-            return NextResponse.json({ error: 'alias taken' }, {status:400});
+            return NextResponse.json({ error: "Alias is already taken." }, { status: 400 });
         }
 
         await urls.insertOne({ alias, url });
 
-        const baseUrl = process.env.BASE_URL || 'https://projects-mp5.vercel.app/';
-        return NextResponse.json({ shortUrl: `${baseUrl}/${alias}`, status: 200});
-    } catch (error) {
-        console.log(error);
-        return NextResponse.json({error: 'internal error'}, {status:500})
+        const baseUrl = process.env.BASE_URL || "http://localhost:3000";
+        return NextResponse.json({ shortUrl: `${baseUrl}/${alias}` });
+    } catch (error: unknown) {
+        console.error("API error:", error);
+        return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
     }
 }

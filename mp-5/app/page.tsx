@@ -16,14 +16,11 @@ export default function HomePage() {
     try {
       const res = await fetch('/api/shorten', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url, alias }),
       });
 
       const data = await res.json();
-
       if (!res.ok) {
         setError(data.error || 'Something went wrong');
       } else {
@@ -37,9 +34,10 @@ export default function HomePage() {
   return (
       <main className="flex flex-col items-center justify-center min-h-screen p-4">
         <h1 className="text-3xl font-bold mb-6">URL Shortener</h1>
-        <h1 className="text-2xl italic mb-6">https://projects-mp5.vercel.app/
-        <span className="text-blue-600">{alias || 'alias'}</span>
-        </h1>
+
+        <h2 className="text-2xl italic mb-6">
+          {process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/{alias || 'alias'}
+        </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md">
           <input
