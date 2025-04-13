@@ -34,7 +34,7 @@ export async function POST(request: Request) {
 
         await urls.insertOne({ alias, url });
 
-        const baseUrl = process.env.BASE_URL || "http://localhost:3000";
+        const baseUrl = "https://projects-mp5.vercel.app";
         return NextResponse.json({ shortUrl: `${baseUrl}/${alias}` });
     } catch (error: unknown) {
         console.error("API error:", error);
