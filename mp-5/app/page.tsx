@@ -36,7 +36,7 @@ export default function HomePage() {
         <h1 className="text-3xl font-bold mb-6">URL Shortener</h1>
 
         <h2 className="text-2xl italic mb-6">
-          {'http://projects-mp5.vercel.app'}/{alias || 'alias'}
+          {'http://projects-mp5-phi.vercel.app'}/{alias || 'alias'}
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md">
